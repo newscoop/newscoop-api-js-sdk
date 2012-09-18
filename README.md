@@ -1,0 +1,2 @@
+newscoop-api-js-sdk
+===================
