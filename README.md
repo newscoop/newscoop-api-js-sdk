@@ -13,21 +13,21 @@ This library allows for access to [Newscoop REST API][2] (codename gimme).
 
 ## Installation
 
-    <script src="/Resources/public/js/newscoop.js"></script>
+    <script src="newscoop.js"></script>
 
 ## Usage
 
 ```javascript
-    var api = new NewscoopRestApi('http://newscoop.dev/api');
+var api = new NewscoopRestApi('http://newscoop.dev/api');
 
-    api.getResource('/articles', {'type': 'news'})
-        .setItemsPerPage(5)
-        .setOrder({'number': 'asc'})
-        .makeRequest(function(res){
-            // callback
-        });
+api.getResource('/articles', {'type': 'news'})
+    .setItemsPerPage(5)
+    .setOrder({'number': 'asc'})
+    .makeRequest(function(res){
+        // callback
+    });
 
-```    
+```
 
 ## More Information
 
