@@ -131,7 +131,9 @@ function microAjax(B,A){this.bindFunction=function(E,D){return function(){return
         setOrder: function(order)
         {
             for (var key in order) {
-                this.addParam('sort['+key+']', order[key]);
+                if (order.hasOwnProperty(key)) {
+                    this.addParam('sort['+key+']', order[key]);
+                }
             }
             return this;
         },
